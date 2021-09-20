@@ -9,6 +9,7 @@ import {StoreContext,store} from './app/stores/store';
 import { BrowserRouter, Router } from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 import 'react-calendar/dist/Calendar.css';
+import 'react-datepicker/dist/react-datepicker.css'
 
 export const history = createBrowserHistory();
 
