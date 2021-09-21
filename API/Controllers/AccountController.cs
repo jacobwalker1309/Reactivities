@@ -54,10 +54,12 @@ namespace API.Controllers
         {
             if(await _userManager.Users.AnyAsync(x => x.Email == registerDTO.Email))
             {
-                return BadRequest("Email taken");
+                ModelState.AddModelError("email","Email taken");
+                return BadRequest(ModelState);
             }
             if(await _userManager.Users.AnyAsync(x => x.Email == registerDTO.Email))
             {
+                ModelState.AddModelError("username","Username taken");
                 return BadRequest("Email taken");
             }
 
