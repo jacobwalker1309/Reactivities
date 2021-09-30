@@ -11,6 +11,7 @@ export interface Activity {
     isCancelled: any |null;
     isGoing: any | null;
     isHost: any | null;
+    host?:Profile;
     attendees?:Profile[]
     
   }
